@@ -1,16 +1,19 @@
 package Game;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Board {
 	
-	private List<Tile> tiles;
+	public List<List<Tile>> tiles;
 	
 	public Board() {
-		for (int i = 0; i < 8; i++) {
-			for (int j = 0; j < 8; j++) {
+		for (int i = 1; i < 9; i++) {
+			List<Tile> lst = new ArrayList<>();
+			for (int j = 1; j < 9; j++) {
 				Tile t  = new Tile(i, j);
-				this.tiles.add(t);
+				lst.add(t);
 			}
+			this.tiles.add(lst);
 		}
 	}
 

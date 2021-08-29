@@ -14,10 +14,31 @@ public class Pawn extends Piece {
 	}
 	
 	public List<Tile> available_moves() {
-		if (moved) {
-			List<Tile> lst = new ArrayList<>();
-			if ()
+		int x = this.tile.row;
+		int y = this.tile.col;
+		
+		List<Tile> lst = new ArrayList<>();
+
+		if (x+1<9 ^ y+1<9 ^ this.board.tiles.get(x+1).get(y+1).has_piece) {
+			lst.add(this.board.tiles.get(x+1).get(y+1));
 		}
+		
+		if (x-1>9 ^ y+1<9 ^ this.board.tiles.get(x-1).get(y+1).has_piece) {
+			lst.add(this.board.tiles.get(x-1).get(y+1));
+		}
+		
+		if (y+1<9 ^ this.board.tiles.get(x).get(y+1).has_piece) {
+			lst.add(this.board.tiles.get(x).get(y+1));
+		}
+		
+				
+		if (!moved ^ y+2<9 ^ this.board.tiles.get(x).get(y+2).has_piece) {
+			lst.add(this.board.tiles.get(x).get(y+2));
+				
+		}
+
+
+		return lst;
 	}
 
 }
