@@ -6,11 +6,13 @@ import java.util.List;
 public abstract class Piece {
 	public Tile tile;
 	public Board board;
+	public int color;
 	
 	
-	public Piece(Tile t, Board b) {
+	public Piece(Tile t, Board b, int x) {
 		this.tile = t;
 		this.board = b;
+		this.color = x;
 	}
 	
 	public Tile position() {
@@ -32,5 +34,6 @@ public abstract class Piece {
 		
 		return lst;
 	}
+	
 
 }

@@ -8,8 +8,8 @@ public class Pawn extends Piece {
 	public boolean moved;
 	public Board board;
 	
-	public Pawn(Tile t, Board b) {
-		super(t, b);
+	public Pawn(Tile t, Board b, int x) {
+		super(t, b, x);
 		this.moved = false;
 	}
 	

@@ -8,8 +8,8 @@ public class Rook extends Piece {
 	public Tile tile;
 	public Board board;
 	
-	public Rook(Tile t, Board b) {
-		super (t, b);
+	public Rook(Tile t, Board b, int x) {
+		super (t, b, x);
 	}
 	
 	public List<Tile> available_moves(){
@@ -27,3 +27,4 @@ public class Rook extends Piece {
 	
 }
 
+ 

@@ -8,8 +8,8 @@ public class Queen extends Piece {
 	public Tile tile;
 	public Board board;
 	
-	public Queen(Tile t, Board b) {
-		super (t, b);
+	public Queen(Tile t, Board b, int x) {
+		super (t, b, x);
 	}
 	
 	public List<Tile> available_moves(){
